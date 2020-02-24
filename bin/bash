@@ -1,0 +1,13 @@
+#!/bin/bash 
+
+# Zeit
+backuptime=`date +%d-%b-%y` 
+
+# Erstellt eine Datei mit dem Zeitpunkt des Backups im Namen
+whereto=/home/nicole/Backups/cronbackup-$backuptime.tar.gz 
+
+# Bestimmt den Quellordner
+source=/home/nicole/Downloads
+
+# Erstellt das Backup
+tar -cpzf $whereto $source
